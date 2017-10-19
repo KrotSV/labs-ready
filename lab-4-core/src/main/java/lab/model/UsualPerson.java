@@ -12,20 +12,13 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 @Data
-@Entity
 @EqualsAndHashCode(exclude = "id")
 @ToString(exclude = "id")
 public class UsualPerson implements Person {
 
-  @Id
-  @Column
   private int id;
-
-  @Column
   private String name;
 
-  @ManyToOne(fetch = FetchType.EAGER)
-  @JoinColumn(name = "country_id")
   private Country country;
 
   private int age;

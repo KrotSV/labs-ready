@@ -5,22 +5,22 @@
   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean id="person" class="lab.model.UsualPerson">
-    <property name="name" value="John Smith"/>
+    <property name="name" value="Obi Van Kenobi"/>
     <property name="country" ref="country"/>
-    <property name="age" value="35"/>
+    <property name="age" value="60"/>
     <property name="height" value="1.78F"/>
-    <property name="programmer" value="true"/>
+    <property name="programmer" value="false"/>
     <property name="contacts">
       <list>
-        <value>asd@asd.ru</value>
-        <value>+7-234-456-67-89</value>
+        <value>e-mail: obi.van@xyz.com</value>
+        <value>skype: kenobi</value>
       </list>
     </property>
   </bean>
 
   <bean id="country" class="lab.model.Country">
     <property name="id" value="1"/>
-    <property name="name" value="Russia"/>
-    <property name="codeName" value="RU"/>
+    <property name="name" value="Tatuin"/>
+    <property name="codeName" value="TA"/>
   </bean>
 </beans>

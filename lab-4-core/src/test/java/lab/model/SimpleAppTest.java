@@ -3,6 +3,7 @@ package lab.model;
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,29 +28,22 @@ public class SimpleAppTest {
   @Test
   public void testInitPerson() {
     UsualPerson person = (UsualPerson) context.getBean("person");
-//		FYI: Another way to achieve the bean
-//		person = context.getBean(UsualPerson.class);
     assertEquals(expectedPerson, person);
     System.out.println(person);
   }
 
   private UsualPerson getExpectedPerson() {
     UsualPerson person = new UsualPerson();
-    person.setAge(35);
+    person.setAge(60);
     person.setHeight(1.78F);
-    person.setProgrammer(true);
-    person.setName("John Smith");
+    person.setProgrammer(false);
+    person.setName("Obi Van Kenobi");
 
-    Country country = new Country();
-    country.setId(1);
-    country.setName("Russia");
-    country.setCodeName("RU");
+    Country country = new Country(1, "Tatuin", "TA");
 
     person.setCountry(country);
 
-    List<String> contacts = new ArrayList<>();
-    contacts.add("asd@asd.ru");
-    contacts.add("+7-234-456-67-89");
+    List<String> contacts = Arrays.asList("e-mail: obi.van@xyz.com", "skype: kenobi");
 
     person.setContacts(contacts);
 
