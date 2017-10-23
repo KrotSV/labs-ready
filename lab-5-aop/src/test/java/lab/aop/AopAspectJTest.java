@@ -3,11 +3,10 @@ package lab.aop;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import lab.model.ApuBar;
+import lab.model.MoBar;
 import lab.model.Bar;
 import lab.model.Customer;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +58,6 @@ public class AopAspectJTest {
 
   @Test
   public void testAllAdvices() {
-    assertFalse("barObject instanceof ApuBar", bar instanceof ApuBar);
+    assertFalse("barObject instanceof MoBar", bar instanceof MoBar);
   }
 }

@@ -2,7 +2,7 @@ package lab.model;
 
 import lab.aop.AopLog;
 
-public class ApuBar implements Bar {
+public class MoBar implements Bar {
 
   public Squishee sellSquishee(Customer customer) {
     if (customer.isBroke()) {
